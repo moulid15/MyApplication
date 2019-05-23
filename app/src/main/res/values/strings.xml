@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Calaculator</string>
+    <string name="input"> Input value </string>
+    <string name="resultB"> Result </string>
+    <string name="resultScreen"> output here </string>
+</resources>
