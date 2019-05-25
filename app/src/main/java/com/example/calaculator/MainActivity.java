@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static java.sql.DriverManager.println;
 
@@ -26,10 +27,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                String res=ops(strInput);
-                String strInput= input.getText().toString();
-                String res=ops(strInput);
+                String strInput = input.getText().toString();
+                strInput=strInput.trim();
+                if (strInput.isEmpty()) {
+                    text_View.setText("invalid input");
+                } else {
+                    String res = ops(strInput);
 
-                text_View.setText(res);
+                    text_View.setText(res);
+                }
             }
         });
 
